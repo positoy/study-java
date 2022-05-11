@@ -2,8 +2,10 @@ import org.junit.Test;
 
 import java.time.*;
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 public class TestTime {
+
     @Test
     public void Time() {
         System.out.println("timestamp / date");
@@ -40,5 +42,10 @@ public class TestTime {
          */
         LocalDateTime ldt = LocalDateTime.now();
         System.out.printf("LocalDateTime : %d / %s%n", ldt.toEpochSecond(ZoneOffset.ofHours(9)), ldt.toString());
+    }
+
+    @Test
+    public void duration() {
+        System.out.printf("1 seconds in milliseconds : %d%n", TimeUnit.SECONDS.toMillis(1));
     }
 }
